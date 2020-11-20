@@ -44,3 +44,20 @@ import pandas as pd
 import numpy as np
 df = pd.DataFrame(np.random.randint(10,20, size=(10,7)))
 df.rename(columns={0: "A", 1: "B", 2: "C", 3: "D", 4: "E", 5: "F", 6: "G"})
+
+"""Python code (full with imports) which will plot using matplotlib the following plot with the annotation:
+
+Hint for the annotate function:
+
+plt.annotate('????', (xp, yp), xytext=(???, ???), arrowprops={'arrowstyle':'->'} )
+"""
+
+import numpy as np
+import matplotlib.pyplot as plt
+
+x = np.linspace(0, 10, 1000)
+plt.plot(x, np.sin(x) + 5)
+plt.plot(x, np.cos(x) + 4)
+plt.annotate('intersection p=(4.7, 4)', xy=(4.7, 4), xycoords='data',
+             xytext=(4.7, 3.5), textcoords='data',
+             arrowprops=dict(facecolor='black', width=1))
