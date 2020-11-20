@@ -45,6 +45,23 @@ import numpy as np
 df = pd.DataFrame(np.random.randint(10,20, size=(10,7)))
 df.rename(columns={0: "A", 1: "B", 2: "C", 3: "D", 4: "E", 5: "F", 6: "G"})
 
+"""Assign a label to each backend related to iteractivity: (interactive, -non-interactive):
+
+a) Qt4
+b) Agg
+c) Png
+d) Pdf
+e) Plotly
+f) Bokeh
+"""
+
+#a) Qt4 - interactive
+#b) Agg - mostly non-interactive
+#c) Png - non-interactive
+#d) Pdf - non-interactive
+#e) Plotly - interactive
+#f) Bokeh - interactive
+
 """Python code (full with imports) which will plot using matplotlib the following plot with the annotation:
 
 Hint for the annotate function:
