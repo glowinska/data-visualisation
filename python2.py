@@ -9,9 +9,11 @@ import math
 class Line(object):
   p1, p2
 
+
   def __init__(self,coor1,coor2):
     #Initialize instance attributes with tuples (x1,y1)  and (x2,y2)
     p1, p2 = coor1, coor2
+    
     
   def distance(self):
     #Calculate the length of the segment (line)
@@ -35,13 +37,16 @@ Fill in the class
 
 class Cylinder(object):
 
+
   def __init__(self,height=1,radius=1):
     self.height = height
     self.radius = radius
 
+
   def volume(self):
     return math.pi * self.radius**2 * self.height
     
+
   def surface_area(self):
     return 2*math.pi*self.radius * self.height + math.pi*self.radius**2*2
 
@@ -52,7 +57,7 @@ c.surface_area()
     #cols = int(sum(len(line.split(";")) for line in open(self.filename)) / (rows + 1))
     #print(cols)
 
-!echo "Name;Age;Weight;Height\nJohn;6;25;123\nMary;4;18;98\nJack;8;32;138" > data.txt
+# !echo "Name;Age;Weight;Height\nJohn;6;25;123\nMary;4;18;98\nJack;8;32;138" > data.txt
 
 """Problem 3
 Write a class that takes a filename as an argument, open it and reads its content into a 2D matrix of values (an array of arrays: [[1,2],[3,4]]). The class should define a special function info() which prints out statistical information about column values in the file. Assume that the first row in the file specifies the column names
@@ -89,20 +94,17 @@ class DataFile(object):
     data = []
     for i in range(1,len(lines)):
       new_line = lines[i].split(";")
-      
 
 
-
-      
-      
-      
   def avg(self, colnum=0, colname=''):
     #The column name or colnum can be provided alternatively
     return 1
     
+
   def min(self, colnum=0, colname=''):
     return 1
-      
+
+
   def max(self, colnum=0, colname=''):
     return 1
 

@@ -47,4 +47,18 @@ data = [go.Scatter(y = y_1, x = t, opacity = 0.75, name = 'Trace 1'), go.Scatter
 layout = {'yaxis': {'range': [-2, 2], 'title': "CALCULATED VALUE"}, 'xaxis': {'range': [0, 10], 'title': "TIME"}}
 fig = go.FigureWidget(data, layout)
 
+def recalculate(value):
+    global fig
+    fig.data[0].y, fig.data[1].y = calculate()
+        
+A_1.observe(recalculate, 'value')
+A_2.observe(recalculate, 'value')
+f_1.observe(recalculate, 'value')
+f_2.observe(recalculate, 'value')
+w_1.observe(recalculate, 'value')
+w_2.observe(recalculate, 'value')
+Phi_1.observe(recalculate, 'value')
+Phi_2.observe(recalculate, 'value')
+use.observe(recalculate, 'value')
+
 fig
